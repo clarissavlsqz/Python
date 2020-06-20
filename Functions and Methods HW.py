@@ -30,3 +30,9 @@ def up_low(s):
 def unique_list(lst):
     return list(set(lst))
     
+# Write a Python function to multiply all the numbers in a list.
+def multiply(nums):
+    res = 1
+    for num in nums:
+        res *= num
+    return res
