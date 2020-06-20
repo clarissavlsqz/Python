@@ -8,4 +8,18 @@ def spy_game(nums):
                 return True
     return False
     
-    
+# Write a function that returns the number of prime numbers that exist up to and including a given number    
+def count_primes(num):
+    if num < 2:
+        return 0
+    cont = 1
+    x = 3
+    while x <= num:
+        for i in range(3,x,2):
+            if x%i == 0:
+                x += 2
+                break
+        else:
+            cont += 1
+            x += 2
+    return cont
