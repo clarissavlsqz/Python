@@ -36,3 +36,25 @@ def multiply(nums):
     for num in nums:
         res *= num
     return res
+#Write a Python function that checks whether a word or phrase is palindrome or not.
+def palindrome(s):
+    s = s.replace(' ','')
+    newStr = s[::-1]
+    for i in range(len(s)):
+        if s[i] != newStr[i]:
+            return False
+    return True
+
+def palindrome(s):
+    s = s.replace(' ','')
+    return s == s[::-1]
+
+#Write a Python function to check whether a string is pangram or not. (Assume the string passed in does not have any punctuation)
+import string
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    alphabet_set = set(alphabet)
+    str1 = str1.replace(' ','')
+    str1 = str1.lower()
+    str1 = set(str1)
+    return str1 == alphabet_set
