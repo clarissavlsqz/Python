@@ -10,7 +10,7 @@ def display_board(board):
 def player_marker():
     choice = ' '
     while choice not in ['X', 'O']:
-        choice = input("Player 1, choose X or O ")
+        choice = input("Player 1, choose X or O ").upper()
     if choice == 'X':
         player1 = 'X'
         player2 = 'O'
@@ -23,8 +23,6 @@ def player_marker():
 
 def place_marker(board, marker, position):
     board[position] = marker
-    return board
-
 
 def win_check(board, marker):
     return ((board[1] == marker and board[2] == marker and board[3] == marker) or 
