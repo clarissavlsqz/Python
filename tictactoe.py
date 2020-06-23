@@ -61,7 +61,7 @@ def player_choice(board):
 def replay():
     ans = ' '
     while ans not in ['Y', 'N']:
-        ans = input("Do you want to play again? (Y/N) ")
+        ans = input("Do you want to play again? (Y/N) ").upper()
         if ans.isdigit() or ans not in ['Y','N']:
             print("That's not a correct answer, try again")
     return True if ans == 'Y' else False
